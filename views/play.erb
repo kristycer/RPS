@@ -1,7 +1,9 @@
 Hello, <%= @name %>
 
-Rock
+<form method= "POST" action="/play">
+  <input type="submit" name="weapon" value="Paper" />
+  <input type="submit" name="weapon" value="Rock" />
+  <input type="submit" name="weapon" value="Scissors" />
+</form>
 
-Paper
-
-Scissors
+Your weapon is <%= @weapon %>
