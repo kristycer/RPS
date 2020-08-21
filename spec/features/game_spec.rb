@@ -21,4 +21,9 @@ feature 'play a game' do
         click_button 'Rock'
         expect(page).to have_content 'Your weapon is Rock'
     end 
+
+    scenario 'pc chooses a random weapon' do
+        click_button 'Rock'
+        expect(page).to have_content 'Computer chose Rock'
+    end 
 end 
