@@ -24,6 +24,11 @@ feature 'play a game' do
 
     scenario 'pc chooses a random weapon' do
         click_button 'Rock'
+    
         expect(page).to have_content 'Computer chose Rock'
     end 
+
+#     def various_messages
+#         [:Rock, :Paper, :Scissors].map { |weapon| 'Computer chose #{weapon}'}
+# end 
 end 
