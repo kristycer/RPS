@@ -27,18 +27,12 @@ feature 'play a game' do
         expect(page).to have_content 'Computer chose Rock'
     end 
 
-    # scenario 'I win' do
-    #     click_button 'Rock'
-    #     expect(page).to have_content 'You win!'
-    #   end
+
+
+    #  scenario 'win' do
+    #      click_button 'Rock'
+    #      expect(page).to have_content 'you are a winner!'
+    #    end
   
-    #   scenario 'I lose' do
-    #     click_button 'Paper'
-    #     expect(page).to have_content 'You lose!'
-    #   end
-  
-    #   scenario 'I draw' do
-    #     click_button 'Scissors'
-    #     expect(page).to have_content 'You draw!'
-    #   end
+
 end 
