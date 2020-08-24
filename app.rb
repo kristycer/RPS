@@ -1,7 +1,15 @@
 require 'sinatra/base'
+require_relative './lib/game.rb'
+require_relative './lib/computer.rb'
+require_relative './lib/results.rb'
 
 class RPS < Sinatra::Base
   enable :sessions
+#   run! if app_file == $0
+# end
+  # before do
+  #   @game = Game.new
+  # end 
 
   get '/' do
     erb :index
@@ -25,6 +33,15 @@ class RPS < Sinatra::Base
     redirect '/play'
   end 
   
-  # start the server if ruby file executed directly
-  run! if app_file == $0
-end
+  get '/play' do
+    @game = session[:game_start]
+    erb :play
+    end 
+
+    # post '/play' do
+    #   session[:weapon] = params[:weapon].downcase.to_sym
+    #   session[:computer_weapon] = Computer.new.weapon
+    #   redirect '/play'
+    # end
+#   end 
+end 
